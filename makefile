@@ -9,11 +9,12 @@ echo-server:
 	cd echo-server; make; cd ..
 
 
-clean:
+clean
 	cd echo-client; make clean; cd ..
 	cd echo-server; make clean; cd ..
 
 install:
+ 	mkdir  ./bin 2>/dev/null
 	sudo cp bin/echo-client /usr/local/sbin
 	sudo cp bin/echo-server /usr/local/sbin
 
